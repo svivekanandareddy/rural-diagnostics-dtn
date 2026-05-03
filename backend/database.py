@@ -7,7 +7,7 @@ load_dotenv()
 
 # Connect to MongoDB (Defaults to local if MONGO_URL is missing)
 client = AsyncIOMotorClient(os.getenv("MONGO_URL", "mongodb://localhost:27017"))
-db = client.telepathology_db
+db = client["rural_diagnostics"]
 
 # Collections
 users = db.users
