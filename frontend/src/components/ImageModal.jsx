@@ -15,11 +15,11 @@ export default function ImageModal({ caseData, role, onClose }) {
     
   const rightImage = role === 'rural'
     ? `${import.meta.env.VITE_API_URL}/uploads/${case_id}_compressed.jpg`
-    // HOSPITAL SWAP: Load the crisp compressed image as the 'AI Restored' triumph
+    // HOSPITAL SWAP: Load the crisp compressed image as the ' Restored' triumph
     : `${import.meta.env.VITE_API_URL}/uploads/${case_id}_compressed.jpg`;
 
   const leftLabel = role === 'rural' ? "Original Biopsy" : "Received (Compressed)";
-  const rightLabel = role === 'rural' ? "Sent (Compressed)" : "AI Restored (High-Res)";
+  const rightLabel = role === 'rural' ? "Sent (Compressed)" : "Restored (High-Res)";
   
   const leftSize = role === 'rural' ? formatSize(original_size) : formatSize(compressed_size);
   const rightSize = role === 'rural' ? formatSize(compressed_size) : formatSize(original_size);
